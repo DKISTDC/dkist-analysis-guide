@@ -40,3 +40,7 @@ This should set you up with a local copy of the files to edit.
 
 
 ## Authoring Content
+
+### Creating a Python Environment
+
+#### Using conda
