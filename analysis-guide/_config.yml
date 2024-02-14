@@ -31,3 +31,5 @@ html:
 sphinx:
   config:
     html_theme: sunpy
+    html_theme_options:
+      search_bar_text: 'Search the Analysis Guide...'
