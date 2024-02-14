@@ -44,3 +44,35 @@ This should set you up with a local copy of the files to edit.
 ### Creating a Python Environment
 
 #### Using conda
+
+If you don't already have conda installed you can follow the instructions here for [installing miniforge](https://docs.dkist.nso.edu/projects/python-tools/en/stable/installation.html#installing-miniforge).
+
+If you already have conda installed you need to create a new environment for the analysis guide and then install the requirements:
+
+```console
+$ conda create -n dkist-analysis-guide -c conda-forge python unidep
+$ conda activate dkist-analysis-guide
+$ unidep install .
+```
+
+When coming back to work on the analysis guide make sure you run `conda activate dkist-analysis-guide` to activate the environment.
+
+
+#### Using pip
+
+If you are using pip, please create an isolated virtual environment and then run:
+
+```console
+$ pip install 'unidep[all]'
+$ unidep install --skip-conda .
+```
+
+### Building the guide
+
+The easiest way to preview the guide as you are working on it is to run:
+
+```console
+$ jupyter-book build analysis-guide
+```
+
+The end of this command should print a file path for you to open in your web browser.
