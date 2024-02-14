@@ -1,0 +1,15 @@
+{
+    "name": "DKIST Analysis Guide",
+    "image": "mcr.microsoft.com/devcontainers/miniconda:0-3",
+    "onCreateCommand": "conda init bash && conda install --yes -c conda-forge unidep && sudo cp .devcontainer/welcome-message.txt /usr/local/etc/vscode-dev-containers/first-run-notice.txt",
+    "postCreateCommand": "git fetch --tags && unidep install .",
+    "waitFor": "postCreateCommand",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "stkb.rewrap"
+            ]
+        }
+    }
+}
