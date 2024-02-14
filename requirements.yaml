@@ -7,3 +7,4 @@ dependencies:
   - jupyter-book
   - pip: sunpy-sphinx-theme
   - conda: graphviz!=2.42.*,!=2.43.*
+  - sphinx-autobuild

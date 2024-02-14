@@ -1,10 +1,21 @@
 {
     "name": "DKIST Analysis Guide",
     "image": "mcr.microsoft.com/devcontainers/miniconda:0-3",
-    "onCreateCommand": "conda init bash && conda install --yes -c conda-forge unidep && sudo cp .devcontainer/welcome-message.txt /usr/local/etc/vscode-dev-containers/first-run-notice.txt",
-    "postCreateCommand": "git fetch --tags && unidep install .",
-    "waitFor": "postCreateCommand",
+    "onCreateCommand": "conda init bash && conda install --yes -c conda-forge unidep && unidep install . && sudo cp .devcontainer/welcome-message.txt /usr/local/etc/vscode-dev-containers/first-run-notice.txt",
+    "postAttachCommand": "jupyter-book config sphinx analysis-guide && sphinx-autobuild analysis-guide analysis-guide/_build/html",
+    "forwardPorts": [8000],
+    "portsAttributes": {
+        "8000": {
+           "label": "Live Preview",
+           "onAutoForward": "openPreview"
+         }
+    },
     "customizations": {
+        "codespaces": {
+            "openFiles": [
+                "analysis-guide/intro.md"
+            ]
+        },
         "vscode": {
             "extensions": [
                 "ms-python.python",
