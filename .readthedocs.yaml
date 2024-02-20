@@ -8,8 +8,7 @@ build:
     post_create_environment:
       - unidep install .
     pre_build:
-      # Generate the Sphinx configuration for this Jupyter Book so it builds.
-      - "jupyter-book config sphinx docs/"
+      - "jupyter-book config sphinx analysis-guide/"
 
 conda:
   environment: .rtd-environment.yml
