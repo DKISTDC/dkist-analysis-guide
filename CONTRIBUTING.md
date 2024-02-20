@@ -78,8 +78,9 @@ The end of this command should print a file path for you to open in your web bro
 
 ### Editing Files
 
-The guide is composed of multiple [markdown](https://www.markdownguide.org/) files which are built into a variety of possible output formats by jupyter book.
-The structure of the book is defined in the `_toc.yml` file, more information about the structure of the guide can be found in the [jupyter book](https://jupyterbook.org/en/stable/basics/organize.html) documentation.
+The guide is written in a markup language called [MyST](https://mystmd.org) which is an extension to [markdown](https://www.markdownguide.org/).
+Each chapter has it's own file which are built into a variety of possible output formats by jupyter book.
+The chapters of the book are defined in the `_toc.yml` file, more information about the structure of the guide can be found in the [jupyter book](https://jupyterbook.org/en/stable/basics/organize.html) documentation.
 
 #### Adding Chapters
 

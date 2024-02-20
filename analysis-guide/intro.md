@@ -1,11 +1,11 @@
 # DKIST Analysis Guide
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+:::{warning}
+🚧 This guide is still under development. 🚧
+:::
 
-Check out the content pages bundled with this sample book to see more.
+This guide aims to get you started with everything you need to know to do scientific analysis of DKIST data.
+Most of the code examples in this guide will use Python, but the techniques should be applicable to analysis of DKIST data in any programming language.
 
 ```{tableofcontents}
 ```
