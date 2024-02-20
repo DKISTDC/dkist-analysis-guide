@@ -5,12 +5,14 @@ build:
   tools:
     python: "mambaforge-4.10"
   jobs:
-    pre_create_environment:
-      - conda install unidep
+    post_create_environment:
       - unidep install .
     pre_build:
       # Generate the Sphinx configuration for this Jupyter Book so it builds.
       - "jupyter-book config sphinx docs/"
+
+conda:
+  environment: .rtd-environment.yml
 
 formats:
   - htmlzip
