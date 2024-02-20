@@ -5,4 +5,11 @@ format: jb-book
 root: intro
 chapters:
 - file: obtaining_data
+- file: level_1_data
+- file: visp/index
+  #sections:
+  #  - file: visp/subsection
+- file: vbi/index
+  #sections:
+  #  - file: vbi/subsection
 - file: contributing
