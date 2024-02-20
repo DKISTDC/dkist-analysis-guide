@@ -38,12 +38,9 @@ $ git remote update
 
 This should set you up with a local copy of the files to edit.
 
-
-## Authoring Content
-
 ### Creating a Python Environment
 
-#### Using conda
+#### Using conda (recommended)
 
 If you don't already have conda installed you can follow the instructions here for [installing miniforge](https://docs.dkist.nso.edu/projects/python-tools/en/stable/installation.html#installing-miniforge).
 
@@ -67,6 +64,8 @@ $ pip install 'unidep[all]'
 $ unidep install --skip-conda .
 ```
 
+## Authoring Content
+
 ### Building the guide
 
 The easiest way to preview the guide as you are working on it is to run:
@@ -76,3 +75,54 @@ $ jupyter-book build analysis-guide
 ```
 
 The end of this command should print a file path for you to open in your web browser.
+
+### Editing Files
+
+The guide is composed of multiple [markdown](https://www.markdownguide.org/) files which are built into a variety of possible output formats by jupyter book.
+The structure of the book is defined in the `_toc.yml` file, more information about the structure of the guide can be found in the [jupyter book](https://jupyterbook.org/en/stable/basics/organize.html) documentation.
+
+#### Adding Chapters
+
+To start a new chaper, create a new markdown file (`.md`) and then add the filename to the `_tox.yml` file.
+
+#### Style
+
+When writing content in the markdown files, please write one sentence per line as this helps when using git.
+
+
+## Submitting your changes
+
+Once you have edited the guide and want to submit your changes, you will need to make a [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork).
+To do you this you need to:
+
+* Locally commit your files to git.
+* Push these commits to your fork on GitHub.
+* Open a Pull Request.
+
+The first step is to create a new local branch with git:
+
+```console
+$ git switch -c <branch name>
+```
+
+replace `<branch name>` with a name for your branch such as "intro-improvements".
+
+Then we will add and commit all the changes:
+
+```console
+$ git add .
+$ git commit -m "<some commit message>"
+```
+
+replace `<some commit message>` with a short descriptive message such as "fixed typos in intro page".
+
+Next we need to push these changes to your fork on GitHub which we setup at the start of the guide:
+
+```console
+$ git push origin <branch name> --set-upstream
+```
+
+again, replacing branch name with the name of the branch you used earlier.
+The output of this command should give you a shortcut link to open a pull request from this branch, but if not you can navigate to `https://github.com/<your github user name here>/dkist-analysis-guide/pull/new/<branch name>` replacing your GitHub username and branch name as needed.
+Type a descriptive title and a short description and then click "Create Pull Request".
+This will then run some automatic tests and notify people to review your contribution.
